@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>FRACS Atlas Map</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stage"></canvas>
+
+<div id="tooltip" hidden></div>
+
+<button id="panel-toggle" type="button" aria-label="Toggle controls">Controls</button>
+
+<aside id="panel">
+  <h1>Atlas Map<span id="stamp"></span></h1>
+
+  <input id="search" type="search" placeholder="Search notes" autocomplete="off" spellcheck="false">
+
+  <section>
+    <h2>View</h2>
+    <div class="seg" role="group">
+      <button type="button" data-view="map" class="on">Map</button>
+      <button type="button" data-view="tree">Tree</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Layers</h2>
+    <label><input type="checkbox" id="l-hier" checked> Course hierarchy</label>
+    <label><input type="checkbox" id="l-link" checked> Cross-links</label>
+    <label><input type="checkbox" id="l-tag"> Shared labels</label>
+    <select id="tag-facet">
+      <option value="all">All facets</option>
+      <option value="path" selected>Pathology</option>
+      <option value="loc">Anatomical Location</option>
+      <option value="op">Operative Type</option>
+      <option value="vessel">Vessel Type</option>
+      <option value="class">Class of Knowledge</option>
+    </select>
+  </section>
+
+  <section>
+    <h2>Filter</h2>
+    <select id="f-class"><option value="">Class of Knowledge — all</option></select>
+    <select id="f-path"><option value="">Pathology — all</option></select>
+    <select id="f-loc"><option value="">Anatomical Location — all</option></select>
+    <label><input type="checkbox" id="f-algo"> Algorithm pages only</label>
+    <label><input type="checkbox" id="f-orphan"> Orphans only <span class="hint" id="orphan-hint"></span></label>
+    <label><input type="checkbox" id="f-empty"> Show empty courses</label>
+  </section>
+
+  <section>
+    <h2>Links open</h2>
+    <div class="seg" role="group">
+      <button type="button" data-dest="public" class="on">Public</button>
+      <button type="button" data-dest="private">My Notion</button>
+    </div>
+  </section>
+
+  <footer>
+    <div id="counts"></div>
+    <button type="button" id="reset">Reset view</button>
+    <a id="fullscreen" href="./" target="_blank" rel="noopener">Open in a new tab</a>
+  </footer>
+</aside>
+
+<div id="loading">Loading the atlas…</div>
+
+<script src="vendor/d3-dispatch.min.js"></script>
+<script src="vendor/d3-quadtree.min.js"></script>
+<script src="vendor/d3-timer.min.js"></script>
+<script src="vendor/d3-force.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

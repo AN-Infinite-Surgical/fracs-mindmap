@@ -1,0 +1,194 @@
+{
+ "1": {
+  "hue": 201.7,
+  "sat": 0.35,
+  "left_third_ambient": 0.098,
+  "file": "course-01-basic-science.png"
+ },
+ "2": {
+  "hue": 17.0,
+  "sat": 0.6,
+  "left_third_ambient": 0.0902,
+  "file": "course-02-atherosclerotic-risk.png"
+ },
+ "3": {
+  "hue": 186.2,
+  "sat": 0.39,
+  "left_third_ambient": 0.098,
+  "file": "course-03-clinical-vascular-lab.png"
+ },
+ "4": {
+  "hue": 199.9,
+  "sat": 0.73,
+  "left_third_ambient": 0.0078,
+  "file": "course-04-vascular-imaging.png"
+ },
+ "5": {
+  "hue": 161.6,
+  "sat": 0.39,
+  "left_third_ambient": 0.1216,
+  "file": "course-05-perioperative-care.png"
+ },
+ "6": {
+  "hue": 10.6,
+  "sat": 0.58,
+  "left_third_ambient": 0.1098,
+  "file": "course-06-bleeding-and-clotting.png"
+ },
+ "7": {
+  "hue": 13.2,
+  "sat": 0.62,
+  "left_third_ambient": 0.0824,
+  "file": "course-07-complications.png"
+ },
+ "8": {
+  "hue": 210.0,
+  "sat": 0.32,
+  "left_third_ambient": 0.0863,
+  "file": "course-08-techniques.png"
+ },
+ "9": {
+  "hue": 120.4,
+  "sat": 0.05,
+  "left_third_ambient": 0.1255,
+  "file": "course-09-grafts-devices.png"
+ },
+ "10": {
+  "hue": 9.9,
+  "sat": 0.74,
+  "left_third_ambient": 0.102,
+  "file": "course-10-aortic-iliac-aneurysms.png"
+ },
+ "11": {
+  "hue": 27.6,
+  "sat": 0.71,
+  "left_third_ambient": 0.2039,
+  "file": "course-11-thoracic-aortic.png"
+ },
+ "12": {
+  "hue": 18.3,
+  "sat": 0.5,
+  "left_third_ambient": 0.1137,
+  "file": "course-12-peripheral-splanchnic-aneurysms.png"
+ },
+ "13": {
+  "hue": 242.9,
+  "sat": 0.42,
+  "left_third_ambient": 0.0784,
+  "file": "course-13-cerebrovascular.png"
+ },
+ "14": {
+  "hue": 2.2,
+  "sat": 0.69,
+  "left_third_ambient": 0.2196,
+  "file": "course-14-acute-limb-ischaemia.png"
+ },
+ "15": {
+  "hue": 173.0,
+  "sat": 0.35,
+  "left_third_ambient": 0.0902,
+  "file": "course-15-lower-extremity-arterial.png"
+ },
+ "16": {
+  "hue": 21.5,
+  "sat": 0.58,
+  "left_third_ambient": 0.0902,
+  "file": "course-16-diabetic-foot.png"
+ },
+ "17": {
+  "hue": 11.0,
+  "sat": 0.41,
+  "left_third_ambient": 0.098,
+  "file": "course-17-upper-extremity-arterial.png"
+ },
+ "18": {
+  "hue": 344.5,
+  "sat": 0.38,
+  "left_third_ambient": 0.0824,
+  "file": "course-18-thoracic-outlet-syndrome.png"
+ },
+ "19": {
+  "hue": 28.2,
+  "sat": 0.58,
+  "left_third_ambient": 0.0941,
+  "file": "course-19-renovascular.png"
+ },
+ "20": {
+  "hue": 144.6,
+  "sat": 0.44,
+  "left_third_ambient": 0.098,
+  "file": "course-20-mesenteric.png"
+ },
+ "21": {
+  "hue": 20.1,
+  "sat": 0.66,
+  "left_third_ambient": 0.1137,
+  "file": "course-21-non-atherosclerotic.png"
+ },
+ "22": {
+  "hue": 216.7,
+  "sat": 0.65,
+  "left_third_ambient": 0.0235,
+  "file": "course-22-acute-vte.png"
+ },
+ "23": {
+  "hue": 227.1,
+  "sat": 0.54,
+  "left_third_ambient": 0.1255,
+  "file": "course-23-chronic-venous.png"
+ },
+ "24": {
+  "hue": 207.7,
+  "sat": 0.59,
+  "left_third_ambient": 0.1176,
+  "file": "course-24-misc-venous.png"
+ },
+ "25": {
+  "hue": 175.9,
+  "sat": 0.15,
+  "left_third_ambient": 0.098,
+  "file": "course-25-lymphoedema.png"
+ },
+ "26": {
+  "hue": 287.9,
+  "sat": 0.49,
+  "left_third_ambient": 0.102,
+  "file": "course-26-vascular-malformations.png"
+ },
+ "27": {
+  "hue": 186.3,
+  "sat": 0.45,
+  "left_third_ambient": 0.1216,
+  "file": "course-27-haemodialysis-access.png"
+ },
+ "28": {
+  "hue": 0.9,
+  "sat": 0.73,
+  "left_third_ambient": 0.098,
+  "file": "course-28-vascular-trauma.png"
+ },
+ "29": {
+  "hue": 288.1,
+  "sat": 0.28,
+  "left_third_ambient": 0.1294,
+  "file": "course-29-paediatric.png"
+ },
+ "30": {
+  "hue": 66.8,
+  "sat": 0.28,
+  "left_third_ambient": 0.0824,
+  "file": "course-30-miscellaneous.png"
+ },
+ "31": {
+  "hue": 28.2,
+  "sat": 0.56,
+  "left_third_ambient": 0.0745,
+  "file": "course-31-business.png"
+ },
+ "32": {
+  "hue": 185.4,
+  "sat": 0.34,
+  "left_third_ambient": 0.0941,
+  "file": "course-32-technology-social-media.png"
+ }
+}

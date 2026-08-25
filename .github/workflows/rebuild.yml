@@ -1,0 +1,49 @@
+name: rebuild-map
+
+on:
+  schedule:
+    # 14:20 UTC = 02:20 NZST / 03:20 NZDT. Off the hour: the top of the hour is
+    # GitHub's busiest window and scheduled runs get delayed there.
+    - cron: '20 14 * * 1-6'
+    # Sunday is a full rebuild: editing a nested child page does not bump the
+    # parent note's last_edited_time, so the incremental cache would miss it.
+    - cron: '40 13 * * 0'
+  workflow_dispatch:
+    inputs:
+      full:
+        description: 'Ignore the cache and rebuild everything'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-map
+  cancel-in-progress: false      # never kill a half-finished cold build
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build graph
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          FULL_REBUILD: ${{ inputs.full || github.event.schedule == '40 13 * * 0' }}
+        run: node build/build.js
+
+      - name: Commit
+        run: |
+          git config user.name  'atlas-map-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data cache
+          # meta.json changes every run, so there is always a commit — which keeps the
+          # repo "active" and stops GitHub auto-disabling the cron after 60 idle days.
+          git diff --staged --quiet || git commit -m "map: rebuild $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push

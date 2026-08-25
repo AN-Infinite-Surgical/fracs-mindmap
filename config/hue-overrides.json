@@ -1,0 +1,4 @@
+{
+  "_comment": "Force a course's map hue by number, e.g. \"16\": 45. Courses with 8+ notes already keep their exact Dark Atlas cover hue; everything else is relaxed into the gaps automatically. Anything set here is pinned and never moved.",
+  "overrides": {}
+}
