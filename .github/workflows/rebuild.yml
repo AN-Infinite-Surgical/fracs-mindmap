@@ -32,13 +32,29 @@ jobs:
         with:
           node-version: '22'
 
+      # Until the integration token is set, skip rather than fail: a nightly red
+      # cross would just be noise, and there is nothing to rebuild without it.
+      - name: Check for token
+        id: gate
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: |
+          if [ -z "$NOTION_TOKEN" ]; then
+            echo "NOTION_TOKEN is not set - skipping the rebuild."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build graph
+        if: steps.gate.outputs.ready == 'true'
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           FULL_REBUILD: ${{ inputs.full || github.event.schedule == '40 13 * * 0' }}
         run: node build/build.js
 
       - name: Commit
+        if: steps.gate.outputs.ready == 'true'
         run: |
           git config user.name  'atlas-map-bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
