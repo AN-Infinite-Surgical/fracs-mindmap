@@ -16,6 +16,17 @@ Live: https://an-infinite-surgical.github.io/fracs-mindmap/
   capped by mutual top-3, so no page blooms into a starburst.
 - **Orphans** — notes with no cross-links in or out. A revision gap-finder.
 
+## Navigating
+
+Click any node and the camera flies to it: that page takes the centre and everything it connects to
+is arranged around it — its course, the pages it links to and from, and its nearest neighbours by
+shared labels. Links between those neighbours are drawn too, so you can see which of them are also
+related to each other. Click a surrounding node to travel there, **Back** to retrace, **Escape** or
+**Whole map** to zoom out. Double-click, or click the centred node again, to open it in Notion.
+
+Returning to the whole map restores the exact geography you left, rather than re-running the
+simulation and shuffling it.
+
 Colours are the Dark Atlas cover hues. The seven largest courses keep their exact signature hue;
 smaller ones are relaxed into the gaps, because the raw sampled hues collide badly
 (13 of 20 adjacent active-course pairs sat within 15 degrees).

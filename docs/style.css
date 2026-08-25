@@ -80,3 +80,26 @@ body.panel-hidden #panel-toggle{display:block}
   box-shadow:0 10px 30px rgba(0,0,0,.6)}
 #toast a{color:#7ba3e0;text-decoration:none;word-break:break-all}
 #toast a:hover{text-decoration:underline}
+
+/* ---- focus card ---- */
+#focus{position:fixed;right:14px;top:14px;z-index:12;width:242px;max-height:calc(100vh - 28px);
+  overflow-y:auto;padding:13px;background:var(--panel);backdrop-filter:blur(14px);
+  border:1px solid var(--line);border-radius:8px;display:flex;flex-direction:column;gap:9px;
+  box-shadow:0 14px 40px rgba(0,0,0,.55)}
+#focus[hidden]{display:none}
+#focus .ft{font-size:13.5px;font-weight:600;line-height:1.3}
+#focus .fc{font-size:11.5px}
+#focus .ftags{font-size:10.5px;color:var(--dim);line-height:1.55}
+#focus .frel{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px}
+#focus .frel li{display:flex;align-items:center;gap:7px;font-size:11.5px;color:#c2cad6}
+#focus .dot{width:7px;height:7px;border-radius:50%;flex:none}
+#focus .dot.course,#focus .dot.child{background:#becdeb}
+#focus .dot.out{background:#78aaff}
+#focus .dot.in{background:#78aaff;opacity:.55}
+#focus .dot.shared{background:#96aacd;opacity:.6}
+#focus .fhint{font-size:10.5px;color:var(--dim);line-height:1.5}
+#focus button{padding:6px 0;background:#0b0e15;color:var(--dim);border:1px solid var(--line);
+  border-radius:5px;font:inherit;font-size:11px;cursor:pointer}
+#focus button:hover{color:var(--ink)}
+#focus #focus-open{background:#182031;color:var(--ink)}
+@media (max-width:760px){#focus{width:190px;right:8px;top:8px}}

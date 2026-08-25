@@ -1,0 +1,23 @@
+{
+  "builtAt": "2026-08-25T10:52:42.330Z",
+  "counts": {
+    "notes": 181,
+    "courses": 32,
+    "coursesActive": 21,
+    "uncoursed": 2,
+    "algorithms": 23,
+    "crosslinks": 584,
+    "droppedTargets": 33
+  },
+  "build": {
+    "walked": 181,
+    "reused": 0,
+    "dropped": 33,
+    "depthHits": 0,
+    "requests": 601,
+    "retries": 0,
+    "softFails": 0,
+    "durationMs": 340223,
+    "mode": "incremental"
+  }
+}
